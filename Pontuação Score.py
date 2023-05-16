@@ -35,8 +35,7 @@ if ganhou:
     if quem_ganhou == "jogador_1" or quem_ganhou == "jogador_2":
         update_score(quem_ganhou)
 
-print(f"Jogador 1: {score['jogador_1']}")
-print(f"Jogador 2: {score['jogador_2']}")
+
 
 while True:
     for event in pygame.event.get():
@@ -46,7 +45,8 @@ while True:
 
     tela.fill((0, 0, 0))  # Limpar a tela
 
-    # Restante do seu código...
+    print(f"Jogador 1: {score['jogador_1']}")
+    print(f"Jogador 2: {score['jogador_2']}")
 
     render_score(tela)  # Renderizar as pontuações
 
