@@ -22,10 +22,18 @@ def update_score(winner):
         score["jogador_2"] += 1
 
 def render_score(screen):
-    score_text = f"Jogador 1: {score['jogador_1']}  Jogador 2: {score['jogador_2']}"
-    font = pygame.font.Font(None, 36)
-    text = font.render(score_text, True, (255, 255, 255))
-    screen.blit(text, (10, 10))
+    global fonte
+    score_jogador1 = f"Pontos: {score['jogador_1']}"
+    score_jogador2 = f"Pontos: {score['jogador_2']}"
+    
+    # Preencher a área da pontuação com a cor de fundo
+    screen.fill((0, 0, 0), (330, 120, 200, 50))
+    screen.fill((0, 0, 0), (490, 120, 200, 50))
+    
+    textJogador1 = fonte.render(score_jogador1, True, (255, 0, 0))
+    textJogador2 = fonte.render(score_jogador2, True, (0, 0, 255))
+    screen.blit(textJogador1, (330, 120))
+    screen.blit(textJogador2, (490, 120))
 
 # Resto do seu código...
 
