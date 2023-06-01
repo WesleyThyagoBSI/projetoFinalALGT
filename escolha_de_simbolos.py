@@ -80,6 +80,3 @@ def jogar_jogo_da_velha():
                 simbolo_atual = jogador1
         else:
             print("Essa posição já está ocupada. Tente novamente.")
-
-# Inicia o jogo.
-jogar_jogo_da_velha()
